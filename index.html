@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b7ac379b77.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Philomena</title>
+    
+</head>
+<body>
+    <div id="app" class="body-div">
+    <header>
+        <i  class="nav-icono"><img class="nav-logo" src="./Imagenes/Logo.jpg" alt=""></i>
+        <nav>
+            <ul class="nav-contenedor">
+                <li v-on:click="artesanias()" class="nav-item">Artesanias</li>
+                <li  v-on:click="acerca()" class="nav-item">Acerca de</li>
+                <li class="nav-item"><a href="./tutorial/index-tutorial.html">Tutorial</a></li>
+                <li class="nav-item"><a href="./Contacto/index-contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-grid">
+        <aside class="aside-grid">
+            <ul class="aside-links" v-for="ficha in data" >
+                <li class="aside-items" v-on:click="cargarTexto(ficha.id),select(ficha.id)" v-bind:key="ficha.id"  :class="ficha.selected">{{ficha.title}}</li>
+            </ul>
+        </aside>
+        <section class="section-grid">
+            <div class="section-item section-texto" >
+            <div v-for="parrafo in data[id].description">
+                <p>{{parrafo}}</p>
+                <br>
+            </div>
+            </div>
+            <div class="section-item section-image" v-on:click="fotoSeleccionada(id)" ><img v-bind:src="data[id].foto" :alt="data[id].alt"></div>
+        </section>
+        <section id="acercaDe" :class="acercaDe">
+            <div class="acercaDe acercaDe-parrafo">
+                <p>Hola!</p><br>
+                <p>Soy Clara. Soy de Mar del Plata, pero vivo en Puerto Madryn desde 2014. Siempre me gustaron las manualidades y, desde que llegué, empecé a hacer talleres y cursos para conectar con personas y desarrollar un hobby. </p><br>
+                <p>Lo primero que hice fue un taller de un mes de encuadernación tradicional. ¡Me encantó! Es un trabajo manual muy dedicado y detallado para que quede bien y prolijo. A partir de ahí, no paré de hacer cuadernos. Me volvía loca con las telas cada vez que iba a comprar y terminaba llevándome un montón, así que después, tenía que hacer un montón de cuadernos también.</p><br>
+                <p>Luego, empecé un taller de mosaiquismo y vitrofusión con una genia total de Madryn que se llama Fernanda Giménez. Sigo aprendiendo con ella, pero ahora hago cerámica. </p><br>
+                <p>El taller de Fer es lo más, porque no solo creamos cosas hermosas, sino que además hacemos una especie de terapia grupal en la que desconectamos de todos los líos que podamos tener en la cabeza y nos enfocamos en la pasta que tenemos delante y, por un rato (que a veces se hace muy corto), nos olvidamos de todo. </p><br>
+                <p>Cuando tuve a mi segundo hijo, hice un taller de tejido XXL con totora y también me gustó mucho. Aprendí a tejer al crochet y me di cuenta de que en poco tiempo podía crear cuencos guardatutti y alfombras hermosas.</p><br>
+                <p>Philomena es el espacio en el que puedo agrupar todas mis actividades creativas y manualidades. No empezó con la intención de vender nada, sino más bien para poder ordenar y ver cuánto he aprendido. Con todos estos talleres no solo aprendí a crear cosas de la nada, sino también a desarrollar la creatividad y la paciencia.</p><br>
+                <p>También se transformó en una fuente inagotable de regalos; cuando tengo algún cumple o evento que amerite llevar regalito, recurro a Philomena. Y de a poco, fueron apareciendo algunos interesados en comprar mis cositas.</p><br>
+                <p>En febrero de 2020 participé de la primera feria junto con amigues creativos y emprendedores.</p>
+            </div>
+            <div class="acercaDe acercaDe-imagen">
+                <img src="./Imagenes/perfil.jpg" alt="Imagen de la artista">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/Philomena-artesanal-162918017525547" target="_blank"><i class="fa-brands fa-facebook i-icons"></i></a>
+            <i class="fa-brands fa-instagram i-icons"></i>
+        </div>
+    </footer>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>

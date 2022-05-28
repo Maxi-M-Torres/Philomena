@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b7ac379b77.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles-contacto.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <i  class="nav-icono"><img class="nav-logo" src="../Imagenes/Logo.jpg" alt=""></i>
+        <nav>
+            <ul class="nav-contenedor">
+                <li class="nav-item"><a href="../index.html">Página principal</a></li>
+                <li class="nav-item"><a href="../tutorial/index-tutorial.html">Tutorial</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="" id="formulario" method="post">
+            <label for="nombre" class="titulo">Nombre<br>
+                <input type="text" class="barra" placeholder="Ingresa tu nombre" id="nombre" >
+            </label>
+            <label for="email" class="titulo">Email<br>
+                <input type="email" class="barra" placeholder="Ingresa tu email" id="email" >
+            </label>
+            <label for="edad" class="titulo">Edad (Opcional)<br>
+                <input type="number" class="barra" placeholder="Ingresa tu edad" id="edad">
+            </label>
+            <label for="favoritas" id="favoritas"><div class="titulo">¿Qué artesanias te gustaron?</div><br>
+                <input type="checkbox" id="favEncuadernaciones" name="favoritas" value="Encuadernaciones">Encuadernaciones<br>
+                <input type="checkbox" id="favMosaiquismoVitrofusión" name="favoritas" value="Mosaiquismo y vitrofusión">Mosaiquismo y vitrofusión<br>
+                <input type="checkbox" id="favCeramica" name="favoritas" value="Ceramica">Ceramica<br>
+                <input type="checkbox" id="favTejidos" name="favoritas" value="Tejidos">Tejidos<br>
+                <input type="checkbox" id="favMiscelanea" name="favoritas" value="Miscelanea">Miscelanea<br>
+            </label><br>
+            <label for="tutorial"><div class="titulo">¿Qué otro tútorial te gustaria ver en la página?</div>
+                <select name="tutorial" id="tutorial" class="barra select">
+                    <option id="tutMosaiquismo" value="Mosaiquismo">Mosaiquismo</option>
+                    <option id="tutVitrofusion" value="vitrofusión">vitrofusión</option>
+                    <option id="tutTejidos" value="Tejidos">Tejidos</option>
+                    <option id="tutCeramica" value="Ceramica">Ceramica</option>
+                </select>
+            </label><br>
+            <label><div class="titulo">¿Recomendarias la página?</div><br>
+                <label for="seguramente">
+                    <input type="radio" class="radio" name="difusion" id="seguramente" value="seguramente">Seguramente<br>
+                </label>
+                <label for="quizas">
+                    <input type="radio" class="radio" name="difusion" id="quizas" value="quizas">Quizas<br>
+                </label>
+                <label for="noLoSe">
+                    <input type="radio" class="radio" name="difusion" id="noLoSe" value="noLoSe">No lo se<br>
+                </label>
+            </label><br>
+            <label for="recomendaciones" class="titulo">Comentarios o sugerencias:<br>
+                <textarea class="barra" name="recomendaciones" id="recomendaciones" cols="30" rows="10"></textarea>
+            </label><br>
+            <button type="submit" id="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/Philomena-artesanal-162918017525547" target="_blank"><i class="fa-brands fa-facebook i-icons"></i></a>
+            <i class="fa-brands fa-instagram i-icons"></i>
+        </div>
+    </footer>
+    <script src="./scripts-contacto.js"></script>
+</body>
+</html>

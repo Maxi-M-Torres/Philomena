@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b7ac379b77.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles-tutorial.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Tutorial</title>
+</head>
+<body>
+    <div id="appT">
+        <header>
+            <i  class="nav-icono"><img class="nav-logo" src="../Imagenes/Logo.jpg" alt=""></i>
+            <nav class="header-nav">
+                <ul class="nav-contenedor">
+                    <li class="nav-item"><a href="../index.html">Página principal</a></li>
+                    <li class="nav-item"><a href="../Contacto/index-contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <nav class="main-nav">
+                <ul class="main-nav-lista">
+                    <li v-for="ficha in data" class="main-nav-items" v-on:click="tutorialAcceso(ficha.id)">{{ficha.title}}</li>
+                </ul>
+            </nav>
+            <section class="instrucciones">
+                <div id="mantenimiento" :class="auxiliar">
+                    <p>Este tutorial está en desarrollo, prontamente estara disponible.<br><br>
+                        Por el momento solo contamos con el tutorial de Encuadernación.
+                    </p>
+                </div>
+                <div class="instrucciones-section materiales">
+                    <h4>{{data[id].content.intro}}</h4><br>
+                    <h3>{{data[id].content.section}}</h3>
+                    <ul>
+                        <li v-for="ficha in data[id].content.items">{{ficha}}</li>
+                    </ul><br>
+                    <h3>{{data[id].content.section2}}</h3>
+                    <ul v-for="ficha in data[id].content.items2">
+                        <li>{{ficha}}</li>
+                    </ul>
+                </div>
+                <div class="instrucciones-section">
+                    <h2 v-for="titulo in data[id]">{{titulo.section3}}</h2><br>
+                    <ol>
+                        <li v-for="paso in data[id].instructions.items">{{paso}}</li>
+                    </ol><br><br>
+                    <p>Aprendí a hacer la costura copta siguiendo este video tutorial. </p><br>
+                    <p>Allí se explica muy bien cómo hacer los ojales y se muestra claramente cómo enlazar cada punto para que quede una costura segura y no suelten las hojas.</p>
+                </div>
+            </section>
+            <section class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Fzt7EqFll_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/Philomena-artesanal-162918017525547" target="_blank"><i class="fa-brands fa-facebook i-icons"></i></a>
+                <i class="fa-brands fa-instagram i-icons"></i>
+            </div>
+        </footer>
+    </div>
+    <script src="./scripts-tutorial.js"></script>
+</body>
+</html>
