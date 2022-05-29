@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
       alert('El email no es válido');
       return;
     }
-    let edad = document.getElementById('edad').value;
-    let regex2 = /^\d+$/
+    let edad = document.getElementById('edad').value; //Este control es redundante porque el type del input es number, pero igual esta hecho.
+    let regex2 = /^\d*$/
     if (!regex2.test(edad)) {
       alert('La edad no es válida');
       return;
