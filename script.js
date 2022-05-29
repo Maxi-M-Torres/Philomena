@@ -40,7 +40,7 @@ const vm = Vue.createApp({
             },{
                 id: 2,
                 foto: './Imagenes/ceramica1.jpg',
-                title: 'Ceramica',
+                title: 'Cerámica',
                 description: [
                     'Empecé hace relativamente poco con este arte. Intenté hace un par de años, pero mi paciencia no estaba tan desarrollada como ahora, por lo que fue un intento fallido. El año pasado, en la pospandemia, hice un segundo intento y no pude parar. Me gusta hacer objetos utilitarios para la cocina: mates, tazas, fuentes o cuencos. Lo más decorativo que hice fueron macetas (porque me encantan las plantas). A veces me cuesta dedicarle el tiempo necesario a algunas etapas del proceso para que las piezas queden bien prolijas y con buenas terminaciones, pero es la paciencia en desarrollo 😊',
                     'La primera pieza que hice en este segundo intento fue un cuenco naranja, que ahora tiene una prima. Cuando llegó el momento de pintar, no sabía muy bien qué hacer y la profe me sugirió esgrafiar. ¡Gran idea! Increíble nivel de abstracción y concentración que logré en esa primera pieza. El resultado final me encantó.'
@@ -71,7 +71,7 @@ const vm = Vue.createApp({
             },{
                 id: 4,
                 foto: './Imagenes/Miscelanea1.png',
-                title: 'Miscelanea',
+                title: 'Miscelánea',
                 description: [
                     'En 2020, organizamos con unas colegas una feria de cosas lindas. La llamamos “El patio” porque se hizo en el patio del instituto donde soy profe. La idea era que las teachers del instituto que, además de enseñar inglés, hacen manualidades pudieran exponer y lograr alguna venta. ¡Salió muy linda! ',
                     'Después llegó el COVID y quedaron las siguientes ediciones en espera. ',
@@ -104,6 +104,8 @@ const vm = Vue.createApp({
             },
             acerca() {
                 this.acercaDe = 'show';
+                this.cargarTexto(0);
+                this.select(0);
             },
             artesanias() {
                 this.acercaDe = 'noShow';
