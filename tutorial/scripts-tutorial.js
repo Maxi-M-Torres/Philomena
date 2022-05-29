@@ -5,7 +5,7 @@ const vmT = Vue.createApp({
             auxiliar: 'aparecer',
             data: [{
                 id: 0,
-                title: 'Encuadernacion',
+                title: 'Encuadernación',
                 content : {
                     intro: 'Aquí te cuento qué materiales necesitas para realizar un cuaderno A5 y cómo hacer las tapas.',
                     section: 'Para las tapas:',
@@ -59,7 +59,7 @@ const vmT = Vue.createApp({
                 }
                 },{
                 id: 2,
-                title: 'Vitrofusion',
+                title: 'Vitrofusión',
                 content : {
                     intro: 'Pendiente de desarrollo',
                     section: '',
@@ -79,7 +79,7 @@ const vmT = Vue.createApp({
                 }
                 },{
                 id: 3,
-                title: 'Ceramica',
+                title: 'Cerámica',
                 content : {
                     intro: 'Pendiente de desarrollo',
                     section: '',
